@@ -109,8 +109,8 @@
     --pacifico-font: "Pacifico", cursive;
     --carter-font: "Carter One", system-ui;
   /* Font Size Variable Start */
-    --heading-one: clamp(2rem, 0.5666rem + 3.6408vw, 3.75rem);
-    --heading-two: clamp(1.75rem, 0.7133rem + 1.8846vw, 3rem);
+    --heading-one: clamp(0.5rem, 0.5666rem + 2.6408vw, 3rem);
+    --heading-two: clamp(0.75rem, 0.7133rem + 1.8846vw, 2.5rem);
     --heading-three: clamp(1.5rem, 0.3353rem + 2.1661vw, 2.375rem);
     --heading-four: clamp(1.25rem, 0.5569rem + 1.444vw, 1.875rem);
     --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
@@ -241,7 +241,7 @@ html {
 }
 
 body {
-    font-family: var(--body-font);
+ 	font-family: 'ProximaNovaRegular';
     color: hsl(var(--body-color));
     word-break: break-word;
     background-color: hsl(var(--white));
@@ -251,27 +251,38 @@ body {
     counter-reset: number;
 }
 
+
+
 p {
     font-weight: 400;
     margin: 0;
     line-height: 2;
+     	font-family: 'ProximaNovaRegular';
 }
+
+
+.title {
+ 	font-family: 'ProximaNovaRegular';
+    font-weight: 900;
+}
+
 
 span {
     display: inline-block;
 }
 
-h1, .h1,
+ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 {
+h6, .h6
+p, .p {
     margin: 0;
-    font-family: var(--heading-font);
+   	font-family: 'ProximaNovaRegular';
     color: var(--main-two-600);
     line-height: 1.1;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 h1, .h1 {
@@ -9491,4 +9502,48 @@ input[type=number] {
 @media (max-width: 575.98px) {
   .counter-gap { padding-bottom: 88px !important; }
   .partners-gap { margin-top: 32px !important; }
+}
+
+
+
+/* about us galeria */
+
+
+.cliente-carousel .item img {
+    height: 360px;
+    border-radius: 25px;
+}
+
+.cliente-carousel .team-item {
+    transition: .3s ease;
+}
+
+.cliente-carousel .team-item:hover {
+    transform: translateY(-8px);
+}
+/* CARDS QUASE COLADOS */
+.cliente-carousel .owl-item {
+    margin-right: 2px !important;
+}
+
+/* CONTAINER COM TAMANHO FIXO */
+.umb-img-wrapper {
+    width: 100%;
+    height: 350px !important;     /* Ajusta a altura padrão */
+    background: #eee;              /* caso a imagem demore a carregar */
+    border-radius: 0 !important;
+    overflow: hidden !important;   /* evita qualquer imagem sair do box */
+    padding: 0 !important;
+    display: block;
+    position: relative;
+}
+
+/* IMAGENS FORÇADAS A TER O MESMO TAMANHO REAL */
+.umb-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;     /* CORTE inteligente */
+    object-position: center !important;
+    border-radius: 0 !important;
+    display: block;
 }
